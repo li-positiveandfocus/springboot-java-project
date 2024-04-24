@@ -4,10 +4,11 @@
 	</head>
 	<body>
 		<div>
-		Welcome to in28minutes
+		Welcome ${name}
 		</div>
+		<hr>
 		<div>
-		Your Name: ${name}
+		<a href = "list-todos">Manage</a>your todos</a>
 		</div>
 
 	</body>

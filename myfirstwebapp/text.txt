@@ -36,3 +36,16 @@ localhost:8080/login
 /WEB-INF/jsp/login.jsp
 
 4. executes view
+
+Todo Service
+1. create Todo class with constructor, setter, getter, toString
+2. Create TodoService class to add data for todos list and create some functions
+3. create TodoController and listTodos.jsp
+
+@SessionAttributes("Name"): details stored across multiple requests
+
+JSTL: diverse format in the html file
+
+
+
+
