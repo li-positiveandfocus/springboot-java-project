@@ -1,0 +1,38 @@
+```
+
+<html>
+	<head>
+		<title> My first HTML Page - JSP</title>
+	</head>
+	<body>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		
+		My first html page with body - JSP
+	</body>
+</html>
+```
+
+/src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
+
+/say-hello-jsp => SayHelloController - sayHelloJsp() method => sayHello
+application.properties: 
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+/WEB-INF/jsp/sayHello.jsp
+
+Login Jsp
+/login => com.in28minutes.springboot.myfirstwebapp.login.LoginController => login.jsp
+
+localhost:8080/login
+1. identifies correct Controller method
+/login => LoginController.gotoLoginPage
+
+2. executes controller method
+=> puts data into model
+=> Returns view name => login
+
+3. identifies correct view
+/WEB-INF/jsp/login.jsp
+
+4. executes view
