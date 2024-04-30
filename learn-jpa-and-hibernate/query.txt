@@ -1,0 +1,12 @@
+insert into course(id, name, author)
+values(1, 'Learn AWS', 'in28minutes');
+
+select * from course;
+delete from course where id = ?;
+
+
+// how to kill 8080 port
+Terminal
+sudo lsof -i :8080
+kill -9 PID#
+
