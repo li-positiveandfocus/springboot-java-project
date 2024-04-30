@@ -1,43 +1,37 @@
 import './Counter.css';
 import { useState } from 'react';
 
-export default function Counter({by}){
+import CounterButton from './CounterButton';
+
+// common state for different counter buttons
+export default function Counter(){
     //[0,f] 0 is the state and f is the function to update the state
     // const state = useState(0);
     const [count, setCount] = useState(0);
 
-    // console.log(by)
-
-    function incrementCounterFunction(){
-        // state[1](state[0]+1)
-        // console.log(state[0]);
-        // console.log(state[1]);
-        // console.log('increment clicked');
+    function incrementCounterParentFunction(by){
         setCount(count+by)
-        console.log(count)
     }
 
-    function decrementCounterFunction(){
+    function decrementCounterParentFunction(by){
         setCount(count-by)
-        console.log(count)
     }
 
+    function resetCounter(){
+        setCount(0)
+    }
 
-    return (
-        <div className="counter">
-            <span className="count">{count}</span>
-            <>
-            <div>
-                <button className="counterButton" 
-                        onClick={incrementCounterFunction}
-                > +{by}
+    return(
+    <>
+      <span className="count">{count}</span>
+      <CounterButton by={1} incrementMethod = {incrementCounterParentFunction} decrementMethod = {decrementCounterParentFunction}/>
+      <CounterButton by={2} incrementMethod = {incrementCounterParentFunction} decrementMethod = {decrementCounterParentFunction}/>
+      <CounterButton by={5} incrementMethod = {incrementCounterParentFunction} decrementMethod = {decrementCounterParentFunction}/>
+      <button className="resetButton" 
+                        onClick={resetCounter}
+                > Reset
                 </button>
-                <button className="counterButton" 
-                        onClick={decrementCounterFunction}
-                > -{by}
-                </button>
-            </div>
-            </>
-        </div>
+    </>
     )
 }
+
